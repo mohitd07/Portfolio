@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio Website</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;1,100&display=swap" rel="stylesheet">
+    
+</head>
+
+<body>
+    <header class="header">
+        <nav class="navbar">
+            <div class="left">Portfolio</div>
+            <div class="right">
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="About.html">About Me</a></li>
+                    <li><a href="Projects.html">Projects</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="firstSection">
+            <div class="leftSection">
+                Hi, My name is <span class="purple">Mohit Dayma</span>
+                <div>and I am a passionate</div>
+                <span id="element"></span>
+                <div class="buttons">
+                    <button id="btn1"><u>Download Resume</u></button>
+                    <button class="btn"><a href="https://github.com/mohitd07?tab=repositories">Visit Github</a></button>
+                </div>
+            </div>
+            <div class="rightSection">
+                <img src="bg.png">
+            </div>
+        </section>
+        <hr>
+        <section class="secondSection">
+            <span class="text-gray">What I have done so far</span>
+            <h1>Work Experience</h1>
+            <div class="box">
+                <div class="vertical">
+                    <img class="image-top" src="developer.png">
+                    <div class="vertical-title">
+                        
+                    </div>
+                    <div class="vertical-desc">
+                        
+                    </div>
+                </div>
+                <div class="vertical">
+                    <img class="image-top" src="developer.png">
+                    <div class="vertical-title">
+                        
+                    </div>
+                    <div class="vertical-desc">
+                        
+                    </div>
+                </div>
+                <div class="vertical">
+                    <img class="image-top" src="developer.png">
+                    <div class="vertical-title">
+                        
+                    </div>
+                    <div class="vertical-desc">
+                        
+                    </div>
+                </div>
+                <div class="vertical">
+                    <img class="image-top" src="developer.png">
+                    <div class="vertical-title">
+                        
+                    </div>
+                    <div class="vertical-desc">
+                        
+                    </div>
+                </div>
+                <div class="vertical">
+                    <img class="image-top" src="developer.png">
+                    <div class="vertical-title">
+                        
+                    </div>
+                    <div class="vertical-desc">
+                        
+                    </div>
+                </div>
+                <div class="vertical">
+                    <img class="image-top" src="developer.png">
+                    <div class="vertical-title">
+                        
+                    </div>
+                    <div class="vertical-desc">
+                        
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="footer">
+            <div class="footer-first">
+                <h3>Mohit's Developer Portfolio</h3>
+            </div>
+            <div class="footer-second">
+                <ul>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+            </div>
+            <div class="footer-third">
+                <ul>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+            </div>
+            <div class="footer-fourth">
+                <ul>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-rights">
+            copyright &#169; 2024 Mohitsportfolio.com | All rights reserved
+        </div>
+    </footer>
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <!-- Setup and start animation! -->
+    <script>
+        var typed = new Typed('#element', {
+            strings: ['Computer Science Engineer.', 'Web Developer.'],
+            typeSpeed: 50,
+        });
+    </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            
+            document.getElementById('btn1').addEventListener('click', function () {
+                var fileURL = 'Mohit_Resume.pdf';
+                downloadFile(fileURL, 'Mohit_Resume.pdf');
+            });
+        });
+
+        function downloadFile(url, fileName) {
+            var a = document.createElement('a');
+            a.href = url;
+            a.download = fileName;
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+        }
+    </script>
+</body>
+
+</html>
